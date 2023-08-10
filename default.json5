@@ -13,6 +13,5 @@
         ":semanticCommits",
         ":semanticPrefixFixDepsChoreOthers",
         ":timezone(Europe/Belgrade)",
-        ":noUnscheduledUpdates",
     ],
 }
