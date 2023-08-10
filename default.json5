@@ -5,6 +5,7 @@
         ":automergeLinters",
         ":automergeRequireAllStatusChecks",
         ":combinePatchMinorReleases",
+        ":dependencyDashboard",
         ":ignoreModulesAndTests",
         ":maintainLockFilesWeekly",
         ":prNotPending",
