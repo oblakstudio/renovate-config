@@ -2,7 +2,9 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "github>oblakstudio/renovate-config",
-    "group:semantic-releaseMonorepo"
+    "group:semantic-releaseMonorepo",
+    ":automergeMinor",
+    ":autoMergePatch"
   ],
   "npm": {
     "enabled": true,
