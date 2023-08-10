@@ -3,6 +3,7 @@
   "extends": [
     "github>oblakstudio/renovate-config",
     "group:semantic-releaseMonorepo",
+    "group:typescript-eslintMonorepo",
     ":automergeMinor",
     ":automergePatch"
   ],
