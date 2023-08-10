@@ -1,0 +1,31 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "github>oblakstudio/renovate-config",
+    "group:semantic-releaseMonorepo"
+  ],
+  "npm": {
+    "enabled": true,
+    "lockFileMaintenance": {
+      "description": "Automatically merge lock file updates",
+      "enabled": true,
+      "automerge": true
+    },
+    "minimumReleaseAge": "7 days",
+    "packageRules": [
+      {
+        "description": "disable @types/node major updates",
+        "enabled": false,
+        "matchPackageNames": ["@types/node"],
+        "matchUpdateTypes": ["major"]
+      },
+      {
+        "description": "disable package.json > engines update",
+        "matchDepTypes": ["engines"],
+        "enabled": false
+      }
+    ],
+    "rangeStrategy": "bump",
+    "schedule": "at any time"
+  }
+}
