@@ -4,7 +4,7 @@
     "github>oblakstudio/renovate-config",
     "group:semantic-releaseMonorepo",
     ":automergeMinor",
-    ":autoMergePatch"
+    ":automergePatch"
   ],
   "npm": {
     "enabled": true,
