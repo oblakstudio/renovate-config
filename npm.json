@@ -4,6 +4,8 @@
     "github>oblakstudio/renovate-config",
     "group:semantic-releaseMonorepo",
     "group:typescript-eslintMonorepo",
+    "group:jestPlusTSJest",
+    "group:jestPlusTypes",
     ":automergeMinor",
     ":automergePatch"
   ],
