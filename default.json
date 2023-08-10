@@ -15,5 +15,11 @@
     ":semanticCommits",
     ":semanticPrefixFixDepsChoreOthers",
     ":timezone(Europe/Belgrade)"
+  ],
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true
+    }
   ]
 }
