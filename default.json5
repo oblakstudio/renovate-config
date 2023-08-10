@@ -1,0 +1,18 @@
+{
+    $schema: "https://docs.renovatebot.com/renovate-schema.json",
+    extends: [
+        ":ignoreModulesAndTests",
+        ":automergeLinters",
+        ":automergeRequireAllStatusChecks",
+        ":combinePatchMinorReleases",
+        ":ignoreModulesAndTests",
+        ":maintainLockFilesWeekly",
+        ":prNotPending",
+        ":rebaseStalePrs",
+        ":semanticCommits",
+        ":semanticPrefixFixDepsChoreOthers"
+        ":timezone(Europe/Belgrade)",
+        ":noUnscheduledUpdates",
+    ],
+
+}

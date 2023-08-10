@@ -1,0 +1,1 @@
+# A set of shareable and reusable Renovate config presets
