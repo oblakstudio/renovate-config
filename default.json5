@@ -10,9 +10,8 @@
         ":prNotPending",
         ":rebaseStalePrs",
         ":semanticCommits",
-        ":semanticPrefixFixDepsChoreOthers"
+        ":semanticPrefixFixDepsChoreOthers",
         ":timezone(Europe/Belgrade)",
         ":noUnscheduledUpdates",
     ],
-
 }
