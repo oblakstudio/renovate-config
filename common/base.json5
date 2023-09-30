@@ -17,6 +17,7 @@
         {
             extends: ["monorepo:semantic-release"],
             automerge: true,
+            matchUpdateTypes: ["digest", "patch", "minor", "major"],
         },
         {
             matchUpdateTypes: ["major"],
@@ -24,7 +25,7 @@
             labels: ["Major Update"],
         },
         {
-            matchUpdateTypes: ["minor", "patch"],
+            matchUpdateTypes: ["minor", "patch", "digest"],
             automerge: true,
         },
     ],
