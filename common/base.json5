@@ -5,7 +5,7 @@
         ":ignoreModulesAndTests",
         ":label(dependencies)",
         ":maintainLockFilesWeekly",
-        ":prConcurrentLimit20",
+        ":disableRateLimiting",
         ":rebaseStalePrs",
         ":renovatePrefix",
         ":semanticCommits",
