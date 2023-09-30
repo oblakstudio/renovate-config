@@ -12,6 +12,7 @@
         ":semanticPrefixFixDepsChoreOthers",
         "group:semantic-releaseMonorepo",
     ],
+    automergeStrategy: "merge-commit",
     packageRules: [
         {
             extends: ["monorepo:semantic-release"],
