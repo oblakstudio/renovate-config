@@ -1,0 +1,7 @@
+{
+    $schema: "https://docs.renovatebot.com/renovate-schema.json",
+    extends: [
+        "github>oblakstudio/renovate-config//common/base.json5"
+        "helpers:disableTypesNodeMajor"
+        ],
+}

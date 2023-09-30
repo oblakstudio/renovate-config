@@ -1,0 +1,21 @@
+{
+    $schema: "https://docs.renovatebot.com/renovate-schema.json",
+    extends: [
+        ":automergeRequireAllStatusChecks",
+        ":ignoreModulesAndTests",
+        ":label(dependencies)",
+        ":maintainLockFilesWeekly",
+        ":prConcurrentLimit20",
+        ":rebaseStalePrs",
+        ":renovatePrefix",
+        ":semanticCommits",
+        ":semanticPrefixFixDepsChoreOthers",
+        "group:semantic-releaseMonorepo",
+    ],
+    packageRules: [
+        {
+            matchUpdateTypes: ["minor", "patch"],
+            automerge: true,
+        },
+    ],
+}
