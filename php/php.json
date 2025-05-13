@@ -5,8 +5,10 @@
   "rangeStrategy": "widen",
   "matchPackageNames": ["php"],
   "description": "Base PHP configuration for Renovate. This config is used in all repositories that use PHP.",
-  "constraints": {
-    "php": "{{arg0}}"
+  "force": {
+    "constraints": {
+      "php": "{{arg0}}"
+    }
   },
   "packageRules": [
     {
