@@ -16,4 +16,4 @@ trim_trailing_whitespace = false
 insert_final_newline = false
 
 [*.json5]
-indent_size = 4
+indent_size = 2

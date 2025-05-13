@@ -1,0 +1,20 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "groupName": "PHPStan",
+  "matchDatasources": ["packagist"],
+  "matchPackagePrefixes": ["phpstan/"],
+  "matchPackagePatterns": [
+    "^ergebnis/phpstan-rules$",
+    "^phpstan/extension-installer$",
+    "^phpstan/phpstan-deprecation-rules$",
+    "^phpstan/phpstan-mockery$",
+    "^phpstan/phpstan-phpunit$",
+    "^phpstan/phpstan-strict-rules$",
+    "^shipmonk/dead-code-detector$",
+    "^shipmonk/phpstan-rules$",
+    "^swissspidy/phpstan-no-private$",
+    "^tomasvotruba/type-coverage$",
+    "^yamadashy/phpstan-friendly-formatter$"
+  ],
+  "extends": ["group:phpstan"]
+}
