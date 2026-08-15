@@ -1,8 +1,6 @@
 {
-    $schema: "https://docs.renovatebot.com/renovate-schema.json",
-    extends: [
-        "github>oblakstudio/renovate-config//common/base.json5",
-        "helpers:disableTypesNodeMajor",
-        "npm:unpublishSafe",
-    ],
+  // Retained throughout 1.x; TypeScript applications use JavaScript policy.
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "Compatibility alias for JavaScript applications.",
+  extends: ["../presets/javascript-application"],
 }

@@ -1,22 +1,5 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "labels": ["Dependencies 📦", "PHP 🐘"],
-  "managers": ["composer"],
-  "rangeStrategy": "widen",
-  "matchPackageNames": ["php"],
-  "description": "Base PHP configuration for Renovate. This config is used in all repositories that use PHP.",
-  "force": {
-    "constraints": {
-      "php": "{{arg0}}"
-    }
-  },
-  "packageRules": [
-    {
-      "extends": [
-        "github>oblakstudio/renovate-config//composer/in-range",
-        "github>oblakstudio/renovate-config//composer/do-not-update-php",
-        "github>oblakstudio/renovate-config//composer/phpstan"
-      ]
-    }
-  ]
+  "description": "Compatibility alias for published Composer libraries; legacy arguments are ignored.",
+  "extends": ["../presets/php-library"]
 }

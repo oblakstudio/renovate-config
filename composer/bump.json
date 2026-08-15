@@ -1,6 +1,12 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "managers": ["composer"],
-  "rangeStrategy": "bump",
-  "prPriority": 13
+  "description": "Compatibility preset for Composer bump range behavior.",
+  "packageRules": [
+    {
+      "description": "Bump Composer constraints and retain the historical priority.",
+      "matchManagers": ["composer"],
+      "rangeStrategy": "bump",
+      "prPriority": 13
+    }
+  ]
 }

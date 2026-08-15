@@ -1,7 +1,5 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "github>oblakstudio/renovate-config//common/base",
-    "github>oblakstudio/renovate-config//php/php({{arg0}})"
-  ]
+  "description": "Compatibility alias for published WordPress plugins.",
+  "extends": ["./presets/wordpress-plugin"]
 }

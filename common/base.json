@@ -1,19 +1,5 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:base",
-    ":automergeRequireAllStatusChecks",
-    ":ignoreModulesAndTests",
-    ":label(Dependencies)",
-    ":maintainLockFilesWeekly",
-    ":disableRateLimiting",
-    ":rebaseStalePrs",
-    ":renovatePrefix",
-    ":semanticCommits",
-    ":semanticPrefixFixDepsChoreOthers",
-    "group:semantic-releaseMonorepo"
-  ],
-  "automergeStrategy": "merge-commit",
-  "timezone": "Europe/Belgrade",
-  "osvVulnerabilityAlerts": true
+  "description": "Compatibility alias for the universal base preset.",
+  "extends": ["../presets/base"]
 }

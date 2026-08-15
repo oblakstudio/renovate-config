@@ -1,6 +1,5 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "managers": ["github-actions"],
-  "rangeStrategy": "auto",
-  "prPriority": 13
+  "description": "Compatibility alias for immutable GitHub Actions policy.",
+  "extends": ["../rules/github-actions"]
 }

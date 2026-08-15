@@ -1,6 +1,12 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "managers": ["composer"],
-  "matchPackageNames": ["php"],
-  "enabled": false
+  "description": "Compatibility preset that protects the Composer PHP platform requirement.",
+  "packageRules": [
+    {
+      "description": "Never update the declared PHP platform requirement.",
+      "matchManagers": ["composer"],
+      "matchPackageNames": ["php"],
+      "enabled": false
+    }
+  ]
 }

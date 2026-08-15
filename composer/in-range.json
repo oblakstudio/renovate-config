@@ -1,6 +1,12 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "managers": ["composer"],
-  "rangeStrategy": "in-range-only",
-  "prPriority": -666
+  "description": "Compatibility preset for in-range Composer lockfile updates.",
+  "packageRules": [
+    {
+      "description": "Allow only in-range Composer updates at the historical priority.",
+      "matchManagers": ["composer"],
+      "rangeStrategy": "in-range-only",
+      "prPriority": -666
+    }
+  ]
 }

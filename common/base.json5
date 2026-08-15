@@ -1,0 +1,6 @@
+{
+  // Retained throughout 1.x for repositories using the original JSON5 URL.
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "Compatibility alias for the universal base preset.",
+  extends: ["../presets/base"],
+}

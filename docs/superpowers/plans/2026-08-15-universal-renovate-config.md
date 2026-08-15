@@ -63,12 +63,12 @@
 - Replace: `github/github-actions.json`
 - Create: `test/preset-structure.test.mjs`
 
-- [ ] Add failing graph tests that enumerate every public and legacy entry point, require parsable JSON/JSON5, resolve local references inside the repository, and reject cycles.
-- [ ] Map legacy universal paths to `presets/base`, npm/TypeScript to `presets/javascript-application`, WordPress to `presets/wordpress-plugin`, PHP to `presets/php-library`, and Actions to `rules/github-actions`.
-- [ ] Convert legacy Composer fragments into valid root presets with scoped `packageRules` preserving their prior behavior.
-- [ ] Explicitly test that `common/base.json5` resolves and that the unrelated `xwp` organization is not trusted.
-- [ ] Run all unit tests and strict formatting.
-- [ ] Commit with `fix: restore legacy renovate preset paths`.
+- [x] Add failing graph tests that enumerate every public and legacy entry point, require parsable JSON/JSON5, resolve local references inside the repository, and reject cycles.
+- [x] Map legacy universal paths to `presets/base`, npm/TypeScript to `presets/javascript-application`, WordPress to `presets/wordpress-plugin`, PHP to `presets/php-library`, and Actions to `rules/github-actions`.
+- [x] Convert legacy Composer fragments into valid root presets with scoped `packageRules` preserving their prior behavior.
+- [x] Explicitly test that `common/base.json5` resolves and that the unrelated `xwp` organization is not trusted.
+- [x] Run all unit tests and strict formatting.
+- [x] Commit with `fix: restore legacy renovate preset paths`.
 
 ## Task 4: Validate presets and exercise real Renovate extraction
 
