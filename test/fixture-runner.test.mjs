@@ -9,3 +9,10 @@ test("the fixture runner reports managers extracted by Renovate", async () => {
   assert.equal(result.exitCode, 0, result.output);
   assert.ok(result.managers.includes("github-actions"), result.output);
 });
+
+test("the repository CI workflow is extractable by Renovate", async () => {
+  const result = await runFixture("repository-ci");
+
+  assert.equal(result.exitCode, 0, result.output);
+  assert.ok(result.managers.includes("github-actions"), result.output);
+});

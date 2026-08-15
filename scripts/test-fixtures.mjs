@@ -43,6 +43,13 @@ export const fixtureCases = [
     preset: "presets/base.json",
     managers: ["dockerfile", "docker-compose"],
   },
+  {
+    name: "repository-ci",
+    preset: "presets/base.json",
+    managers: ["github-actions"],
+    source: ".github/workflows",
+    destination: ".github/workflows",
+  },
 ];
 
 await initializeRenovateLogger();
@@ -101,9 +108,13 @@ export async function runFixture(name) {
   );
 
   try {
-    await cp(path.join(repositoryRoot, "fixtures", name), temporaryDirectory, {
-      recursive: true,
-    });
+    const source = fixture.source
+      ? path.join(repositoryRoot, fixture.source)
+      : path.join(repositoryRoot, "fixtures", name);
+    const destination = fixture.destination
+      ? path.join(temporaryDirectory, fixture.destination)
+      : temporaryDirectory;
+    await cp(source, destination, { recursive: true });
     const config = await loadPreset(fixture.preset);
     await writeFile(
       path.join(temporaryDirectory, "renovate.json"),
