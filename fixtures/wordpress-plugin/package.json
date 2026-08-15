@@ -1,0 +1,8 @@
+{
+  "name": "renovate-wordpress-fixture",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "@wordpress/scripts": "^30.0.0"
+  }
+}

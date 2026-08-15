@@ -1,0 +1,11 @@
+{
+  "name": "oblakstudio/renovate-wordpress-fixture",
+  "type": "wordpress-plugin",
+  "require": {
+    "php": "^8.2",
+    "psr/log": "^3.0"
+  },
+  "require-dev": {
+    "phpstan/phpstan": "^2.0"
+  }
+}

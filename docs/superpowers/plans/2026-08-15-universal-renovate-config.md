@@ -82,11 +82,11 @@
 - Create: `fixtures/github-actions/.github/workflows/ci.yml`
 - Create: `fixtures/docker/{Dockerfile,compose.yml}`
 
-- [ ] Implement strict, non-global validation of each public preset with the pinned validator and fail on warnings or migrations.
-- [ ] Materialize resolved presets into temporary fixture repositories and run pinned Renovate with `--platform=local --dry-run=extract --require-config=required`.
-- [ ] Assert extraction of Composer, npm, GitHub Actions, Dockerfile, and Docker Compose managers from representative fixtures.
-- [ ] Run `npm run validate`, `npm run test:fixtures`, and the aggregate `npm test`.
-- [ ] Commit with `test: verify presets with renovate fixtures`.
+- [x] Implement strict, non-global validation of each public preset with the pinned validator and fail on warnings or migrations.
+- [x] Materialize resolved presets into temporary fixture repositories and run pinned Renovate with `--platform=local --dry-run=extract --require-config=required`.
+- [x] Assert extraction of Composer, npm, GitHub Actions, Dockerfile, and Docker Compose managers from representative fixtures.
+- [x] Run `npm run validate`, `npm run test:fixtures`, and the aggregate `npm test`.
+- [x] Commit with `test: verify presets with renovate fixtures`.
 
 ## Task 5: Add CI and immutable releases
 

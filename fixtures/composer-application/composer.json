@@ -1,0 +1,10 @@
+{
+  "name": "oblakstudio/renovate-composer-fixture",
+  "require": {
+    "php": "^8.2",
+    "psr/log": "^3.0"
+  },
+  "require-dev": {
+    "phpstan/phpstan": "^2.0"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "_readme": ["Generated test fixture; dependency metadata is intentionally empty."],
+  "content-hash": "fixture",
+  "packages": [],
+  "packages-dev": [],
+  "aliases": [],
+  "minimum-stability": "stable",
+  "stability-flags": {},
+  "prefer-stable": false,
+  "prefer-lowest": false,
+  "platform": {
+    "php": "^8.2"
+  },
+  "platform-dev": {},
+  "plugin-api-version": "2.6.0"
+}

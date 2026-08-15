@@ -1,0 +1,14 @@
+{
+  "name": "renovate-javascript-fixture",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "fastify": "^5.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
