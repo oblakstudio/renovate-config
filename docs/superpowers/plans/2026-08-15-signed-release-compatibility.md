@@ -86,5 +86,9 @@ GitHub Actions run `31887367814` passed validation and publication. Release
 repository-level release immutability setting.
 
 - [x] Enable immutable releases for `oblakstudio/renovate-config`.
-- [ ] Publish `v1.0.1` after enforcement is active and verify GitHub reports it
+- [x] Publish `v1.0.1` after enforcement is active and verify GitHub reports it
       as immutable.
+
+GitHub Actions run `31887846617` published `v1.0.1` from signed commit
+`bdde5a01a4a2ab46f2ee89b8d4d18fb3d671971d`; GitHub reports the release as
+immutable.
