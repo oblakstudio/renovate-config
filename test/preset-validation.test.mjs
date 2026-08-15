@@ -1,7 +1,11 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 
-import { presetArguments, publicPresets } from "../scripts/preset-catalog.mjs";
+import {
+  presetArguments,
+  publicPresets,
+  repositoryConfigs,
+} from "../scripts/preset-catalog.mjs";
 import {
   validateConfig,
   validatePreset,
@@ -13,6 +17,7 @@ test("the validation catalog includes current and compatibility entry points", (
   assert.ok(publicPresets.includes("common/base.json5"));
   assert.ok(publicPresets.includes("php/php.json"));
   assert.deepEqual(presetArguments["presets/php-constraint.json"], ["^8.2"]);
+  assert.deepEqual(repositoryConfigs, [".github/renovate.json"]);
 });
 
 test("strict validation accepts a materialized universal preset", async () => {

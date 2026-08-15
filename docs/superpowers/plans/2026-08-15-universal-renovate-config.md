@@ -109,9 +109,9 @@
 - Replace: `README.md`
 - Create conditionally: `AGENTS.md`
 
-- [ ] Confirm `AGENTS.md` does not already exist before writing it.
-- [ ] Document the preset matrix, exact SemVer GitHub references, specialization choices, repository overrides, legacy-path mappings, security/automerge behavior, and the Private Packagist Mend secret setup and read-only-token limitation.
-- [ ] Write a 200–400 word `AGENTS.md` titled “Repository Guidelines” with repository-specific structure, commands, style, tests, commits, PR requirements, and secret-handling guidance.
-- [ ] Run Prettier, all tests, strict preset validation, fixture extraction, `git diff --check`, and a credential-pattern scan.
-- [ ] Review the complete diff against the approved design, preserving `CLAUDE.md` untouched.
-- [ ] Commit with `docs: add renovate usage and contributor guides`.
+- [x] Confirm `AGENTS.md` does not already exist before writing it.
+- [x] Document the preset matrix, exact SemVer GitHub references, specialization choices, repository overrides, legacy-path mappings, security/automerge behavior, and the Private Packagist Mend secret setup and read-only-token limitation.
+- [x] Write a 200–400 word `AGENTS.md` titled “Repository Guidelines” with repository-specific structure, commands, style, tests, commits, PR requirements, and secret-handling guidance.
+- [x] Run Prettier, all tests, strict preset validation, fixture extraction, `git diff --check`, and a credential-pattern scan.
+- [x] Review the complete diff against the approved design, preserving `CLAUDE.md` untouched.
+- [x] Commit with `docs: add renovate usage and contributor guides`.

@@ -6,7 +6,11 @@ import { fileURLToPath } from "node:url";
 
 import { init as initializeRenovateLogger } from "renovate/dist/logger/index.js";
 
-import { presetArguments, publicPresets } from "./preset-catalog.mjs";
+import {
+  presetArguments,
+  publicPresets,
+  repositoryConfigs,
+} from "./preset-catalog.mjs";
 import { loadPreset } from "./preset-loader.mjs";
 
 const repositoryRoot = path.resolve(
@@ -69,8 +73,9 @@ export async function validatePreset(preset) {
 
 async function main() {
   let failed = false;
+  const validationTargets = [...publicPresets, ...repositoryConfigs];
 
-  for (const preset of publicPresets) {
+  for (const preset of validationTargets) {
     const result = await validatePreset(preset);
 
     if (result.exitCode === 0) {
@@ -86,7 +91,7 @@ async function main() {
     process.exitCode = 1;
   } else {
     process.stdout.write(
-      `Validated ${publicPresets.length} public presets with Renovate.\n`,
+      `Validated ${publicPresets.length} public presets and ${repositoryConfigs.length} repository config with Renovate.\n`,
     );
   }
 }

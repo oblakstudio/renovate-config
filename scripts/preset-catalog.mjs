@@ -31,3 +31,5 @@ export const publicPresets = [
 export const presetArguments = {
   "presets/php-constraint.json": ["^8.2"],
 };
+
+export const repositoryConfigs = [".github/renovate.json"];
