@@ -1,0 +1,15 @@
+{
+  "description": "Expose vulnerability fixes immediately while retaining human review.",
+  "osvVulnerabilityAlerts": true,
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "schedule": ["at any time"],
+    "minimumReleaseAge": null,
+    "dependencyDashboardApproval": false,
+    "automerge": false,
+    "rebaseWhen": "conflicted",
+    "semanticCommitType": "fix",
+    "semanticCommitScope": "deps",
+    "addLabels": ["security 🔒"]
+  }
+}

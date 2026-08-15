@@ -1,0 +1,22 @@
+{
+  "description": "Universal policy plus publishable JavaScript package range behavior.",
+  "extends": ["./base"],
+  "packageRules": [
+    {
+      "description": "Widen compatible public dependency ranges for published JavaScript packages.",
+      "matchManagers": ["npm", "bun"],
+      "matchDepTypes": [
+        "dependencies",
+        "optionalDependencies",
+        "peerDependencies"
+      ],
+      "rangeStrategy": "widen"
+    },
+    {
+      "description": "Pin development tools in published JavaScript packages.",
+      "matchManagers": ["npm", "bun"],
+      "matchDepTypes": ["devDependencies"],
+      "rangeStrategy": "pin"
+    }
+  ]
+}

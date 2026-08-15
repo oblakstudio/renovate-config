@@ -68,6 +68,18 @@ function substituteArguments(value, args) {
   return value;
 }
 
+function mergePresetConfig(parent, child) {
+  const parentExtensions = parent.extends ?? [];
+  const childExtensions = child.extends ?? [];
+  const merged = mergeChildConfig(parent, child);
+
+  if (parentExtensions.length > 0 || childExtensions.length > 0) {
+    merged.extends = [...new Set([...parentExtensions, ...childExtensions])];
+  }
+
+  return merged;
+}
+
 async function loadFile(file, root, args, stack) {
   const relativeName = path.relative(root, file);
   const cycleStart = stack.indexOf(file);
@@ -94,7 +106,7 @@ async function loadFile(file, root, args, stack) {
       ...stack,
       file,
     ]);
-    resolvedConfig = mergeChildConfig(resolvedConfig, parentConfig);
+    resolvedConfig = mergePresetConfig(resolvedConfig, parentConfig);
   }
 
   const ownConfig = { ...parsed };
@@ -104,7 +116,7 @@ async function loadFile(file, root, args, stack) {
     delete ownConfig.extends;
   }
 
-  return mergeChildConfig(resolvedConfig, ownConfig);
+  return mergePresetConfig(resolvedConfig, ownConfig);
 }
 
 export async function loadPreset(

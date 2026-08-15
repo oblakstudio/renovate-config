@@ -1,0 +1,16 @@
+{
+  "description": "Pin GitHub Actions to immutable commits and group compatible updates.",
+  "extends": ["helpers:pinGitHubActionDigests"],
+  "packageRules": [
+    {
+      "description": "Label and group compatible GitHub Actions updates.",
+      "matchManagers": ["github-actions"],
+      "matchUpdateTypes": ["minor", "patch", "digest", "pinDigest"],
+      "semanticCommitType": "ci",
+      "semanticCommitScope": "deps",
+      "groupName": "GitHub Actions",
+      "groupSlug": "github-actions",
+      "addLabels": ["ecosystem: github-actions 🤖"]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "description": "Universal policy plus lockfile-oriented Composer application updates.",
+  "extends": ["./base"],
+  "packageRules": [
+    {
+      "description": "Update Composer application lockfiles and replace only out-of-range constraints.",
+      "matchManagers": ["composer"],
+      "rangeStrategy": "update-lockfile"
+    }
+  ]
+}

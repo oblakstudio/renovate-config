@@ -1,0 +1,11 @@
+{
+  "description": "Published WordPress plugin policy with library ranges and reproducible JavaScript builds.",
+  "extends": ["./php-library"],
+  "packageRules": [
+    {
+      "description": "Keep WordPress plugin JavaScript build tooling lockfile-oriented.",
+      "matchManagers": ["npm", "bun"],
+      "rangeStrategy": "update-lockfile"
+    }
+  ]
+}

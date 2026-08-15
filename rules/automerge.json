@@ -1,0 +1,60 @@
+{
+  "description": "Risk-tiered cooldown, approval, rebase, and automerge policy.",
+  "packageRules": [
+    {
+      "description": "Hold all minor updates for three days and require review by default.",
+      "matchUpdateTypes": ["minor"],
+      "minimumReleaseAge": "3 days",
+      "automerge": false
+    },
+    {
+      "description": "Automerge patch, digest, and pin updates after fourteen days.",
+      "matchUpdateTypes": ["patch", "digest", "pin", "pinDigest"],
+      "minimumReleaseAge": "14 days",
+      "automerge": true,
+      "rebaseWhen": "behind-base-branch"
+    },
+    {
+      "description": "Automerge compatible development-tool updates after fourteen days.",
+      "matchDepTypes": ["devDependencies", "require-dev"],
+      "matchUpdateTypes": ["minor"],
+      "minimumReleaseAge": "14 days",
+      "automerge": true,
+      "rebaseWhen": "behind-base-branch"
+    },
+    {
+      "description": "Automerge compatible GitHub Actions updates after fourteen days.",
+      "matchManagers": ["github-actions"],
+      "matchUpdateTypes": ["minor"],
+      "minimumReleaseAge": "14 days",
+      "automerge": true,
+      "rebaseWhen": "behind-base-branch"
+    },
+    {
+      "description": "Require dashboard approval and review for every major update.",
+      "matchUpdateTypes": ["major"],
+      "dependencyDashboardApproval": true,
+      "automerge": false,
+      "addLabels": ["update: major ⚠️"]
+    },
+    {
+      "description": "Trust compatible updates sourced from the organization's GitHub namespaces.",
+      "matchSourceUrls": [
+        "https://github.com/oblakstudio/**",
+        "https://github.com/x-wp/**",
+        "https://github.com/oblakhost/**",
+        "https://github.com/woosync/**"
+      ],
+      "matchUpdateTypes": ["minor", "patch", "digest", "pin", "pinDigest"],
+      "minimumReleaseAge": null,
+      "automerge": true,
+      "rebaseWhen": "behind-base-branch"
+    },
+    {
+      "description": "Always review updates to shared Renovate preset references.",
+      "matchManagers": ["renovate-config"],
+      "automerge": false,
+      "rebaseWhen": "conflicted"
+    }
+  ]
+}

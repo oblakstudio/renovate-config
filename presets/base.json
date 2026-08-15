@@ -1,0 +1,12 @@
+{
+  "description": "Universal Oblak Studio Renovate policy for supported and stable managers.",
+  "extends": [
+    "../rules/core",
+    "../rules/security",
+    "../rules/composer",
+    "../rules/javascript",
+    "../rules/github-actions",
+    "../rules/docker",
+    "../rules/automerge"
+  ]
+}

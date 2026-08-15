@@ -4,7 +4,11 @@ import os from "node:os";
 import path from "node:path";
 import test from "node:test";
 
+import { init as initializeRenovateLogger } from "renovate/dist/logger/index.js";
+
 import { loadPreset } from "../scripts/preset-loader.mjs";
+
+await initializeRenovateLogger();
 
 async function createRepository(files) {
   const root = await mkdtemp(path.join(os.tmpdir(), "renovate-preset-loader-"));

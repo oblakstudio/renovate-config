@@ -1,0 +1,18 @@
+{
+  "description": "Universal policy plus publishable Composer library range behavior.",
+  "extends": ["./base"],
+  "packageRules": [
+    {
+      "description": "Widen compatible runtime constraints for published Composer libraries.",
+      "matchManagers": ["composer"],
+      "matchDepTypes": ["require"],
+      "rangeStrategy": "widen"
+    },
+    {
+      "description": "Keep Composer library development dependencies lockfile-oriented.",
+      "matchManagers": ["composer"],
+      "matchDepTypes": ["require-dev"],
+      "rangeStrategy": "update-lockfile"
+    }
+  ]
+}

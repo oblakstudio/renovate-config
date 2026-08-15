@@ -44,13 +44,13 @@
 - Replace: `default.json`
 - Create: `test/preset-policy.test.mjs`
 
-- [ ] Add failing policy tests for `config:recommended`, Belgrade schedules, PR limits, squash PR automerge, green-check enforcement, lockfile maintenance, security manual review, major approval, cooldowns, commit types, exact labels, trusted organizations, package strategies, PHP immutability, Action SHA pinning, and Docker digest pinning.
-- [ ] Implement `rules/core.json` with the approved scheduling, dashboard, rebase, abandonment, commit, and limit policy.
-- [ ] Implement security and automerge rules so vulnerabilities never automerge, majors require approval, runtime minors remain manual, eligible patch/digest/dev/Action/lockfile updates automerge after checks, and trusted non-major dependencies bypass cooldowns.
-- [ ] Implement Composer, JavaScript, Actions, and Docker policy rules plus application/library/WordPress specializations.
-- [ ] Make `presets/private-packagist.json` secret-only and ensure `default.json` extends only `./presets/base`.
-- [ ] Run `node --test test/preset-policy.test.mjs`.
-- [ ] Commit with `feat: add universal renovate presets`.
+- [x] Add failing policy tests for `config:recommended`, Belgrade schedules, PR limits, squash PR automerge, green-check enforcement, lockfile maintenance, security manual review, major approval, cooldowns, commit types, exact labels, trusted organizations, package strategies, PHP immutability, Action SHA pinning, and Docker digest pinning.
+- [x] Implement `rules/core.json` with the approved scheduling, dashboard, rebase, abandonment, commit, and limit policy.
+- [x] Implement security and automerge rules so vulnerabilities never automerge, majors require approval, runtime minors remain manual, eligible patch/digest/dev/Action/lockfile updates automerge after checks, and trusted non-major dependencies bypass cooldowns.
+- [x] Implement Composer, JavaScript, Actions, and Docker policy rules plus application/library/WordPress specializations.
+- [x] Make `presets/private-packagist.json` secret-only and ensure `default.json` extends only `./presets/base`.
+- [x] Run `node --test test/preset-policy.test.mjs`.
+- [x] Commit with `feat: add universal renovate presets`.
 
 ## Task 3: Restore every legacy entry point
 

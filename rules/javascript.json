@@ -1,0 +1,28 @@
+{
+  "description": "JavaScript dependency classification, labels, and Node alignment.",
+  "packageRules": [
+    {
+      "description": "Label npm and Bun updates as JavaScript dependencies.",
+      "matchManagers": ["npm", "bun"],
+      "addLabels": ["ecosystem: javascript 🟨"]
+    },
+    {
+      "description": "Use non-release commits and one group for JavaScript development tooling.",
+      "matchManagers": ["npm", "bun"],
+      "matchDepTypes": ["devDependencies"],
+      "semanticCommitType": "chore",
+      "semanticCommitScope": "deps",
+      "groupName": "JavaScript development dependencies",
+      "groupSlug": "javascript-development-dependencies"
+    },
+    {
+      "description": "Review Node runtime and type-definition major updates together.",
+      "matchPackageNames": ["node", "@types/node"],
+      "matchUpdateTypes": ["major"],
+      "groupName": "Node.js runtime",
+      "groupSlug": "nodejs-runtime",
+      "dependencyDashboardApproval": true,
+      "automerge": false
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "description": "Organization-wide Renovate scheduling, review, and repository policy.",
+  "extends": [
+    "config:recommended",
+    ":configMigration",
+    "abandonments:recommended"
+  ],
+  "timezone": "Europe/Belgrade",
+  "schedule": ["before 8am on Monday through Thursday"],
+  "automergeSchedule": ["before 8am on Monday through Thursday"],
+  "updateNotScheduled": true,
+  "prConcurrentLimit": 10,
+  "prHourlyLimit": 5,
+  "dependencyDashboard": true,
+  "dependencyDashboardApproval": false,
+  "dependencyDashboardReportAbandonment": true,
+  "semanticCommits": "enabled",
+  "semanticCommitType": "fix",
+  "semanticCommitScope": "deps",
+  "labels": ["dependencies 📦"],
+  "automerge": false,
+  "automergeType": "pr",
+  "automergeStrategy": "squash",
+  "platformAutomerge": false,
+  "ignoreTests": false,
+  "rebaseWhen": "conflicted",
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": ["before 8am on Monday"],
+    "automerge": true,
+    "rebaseWhen": "behind-base-branch",
+    "semanticCommitType": "chore",
+    "semanticCommitScope": "deps"
+  }
+}

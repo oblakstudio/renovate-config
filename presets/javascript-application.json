@@ -1,0 +1,11 @@
+{
+  "description": "Universal policy plus lockfile-oriented JavaScript application updates.",
+  "extends": ["./base"],
+  "packageRules": [
+    {
+      "description": "Preserve in-range JavaScript application manifests and update their lockfiles.",
+      "matchManagers": ["npm", "bun"],
+      "rangeStrategy": "update-lockfile"
+    }
+  ]
+}

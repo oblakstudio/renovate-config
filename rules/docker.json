@@ -1,0 +1,13 @@
+{
+  "description": "Pin Docker tags to immutable digests while preserving readable tags.",
+  "extends": ["docker:pinDigests"],
+  "packageRules": [
+    {
+      "description": "Label Dockerfile and Compose image updates.",
+      "matchManagers": ["dockerfile", "docker-compose"],
+      "semanticCommitType": "fix",
+      "semanticCommitScope": "deps",
+      "addLabels": ["ecosystem: docker 🐳"]
+    }
+  ]
+}

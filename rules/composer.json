@@ -1,0 +1,52 @@
+{
+  "description": "Composer dependency classification, labels, and PHP platform safety.",
+  "packageRules": [
+    {
+      "description": "Label Composer updates as PHP dependencies.",
+      "matchManagers": [
+        "composer"
+      ],
+      "addLabels": [
+        "ecosystem: php 🐘"
+      ]
+    },
+    {
+      "description": "Never change a repository's declared PHP platform requirement.",
+      "matchManagers": [
+        "composer"
+      ],
+      "matchPackageNames": [
+        "php"
+      ],
+      "enabled": false
+    },
+    {
+      "description": "Use non-release commits and one group for Composer development tooling.",
+      "matchManagers": [
+        "composer"
+      ],
+      "matchDepTypes": [
+        "require-dev"
+      ],
+      "semanticCommitType": "chore",
+      "semanticCommitScope": "deps",
+      "groupName": "Composer development dependencies",
+      "groupSlug": "composer-development-dependencies"
+    },
+    {
+      "description": "Keep PHPStan and its extensions compatible in one development update.",
+      "matchManagers": [
+        "composer"
+      ],
+      "matchDepTypes": [
+        "require-dev"
+      ],
+      "matchPackageNames": [
+        "phpstan/phpstan",
+        "phpstan/*"
+      ],
+      "groupName": "PHPStan tooling",
+      "groupSlug": "phpstan-tooling"
+    }
+  ]
+}

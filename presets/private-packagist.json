@@ -1,0 +1,10 @@
+{
+  "hostRules": [
+    {
+      "hostType": "packagist",
+      "matchHost": "repo.packagist.com",
+      "username": "token",
+      "password": "{{ secrets.PRIVATE_PACKAGIST_TOKEN }}"
+    }
+  ]
+}
