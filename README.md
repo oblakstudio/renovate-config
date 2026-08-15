@@ -10,7 +10,7 @@ Pin consumers to an immutable release tag:
 
 ```json
 {
-  "extends": ["github>oblakstudio/renovate-config#1.0.0"]
+  "extends": ["github>oblakstudio/renovate-config#1.0.1"]
 }
 ```
 
@@ -32,8 +32,8 @@ For example:
 ```json
 {
   "extends": [
-    "github>oblakstudio/renovate-config//presets/wordpress-plugin#1.0.0",
-    "github>oblakstudio/renovate-config//presets/private-packagist#1.0.0"
+    "github>oblakstudio/renovate-config//presets/wordpress-plugin#1.0.1",
+    "github>oblakstudio/renovate-config//presets/private-packagist#1.0.1"
   ]
 }
 ```
@@ -68,8 +68,8 @@ parameterized overlay when deployment constraints differ from that file:
 ```json
 {
   "extends": [
-    "github>oblakstudio/renovate-config//presets/php-application#1.0.0",
-    "github>oblakstudio/renovate-config//presets/php-constraint#1.0.0(^8.2)"
+    "github>oblakstudio/renovate-config//presets/php-application#1.0.1",
+    "github>oblakstudio/renovate-config//presets/php-constraint#1.0.1(^8.2)"
   ]
 }
 ```
@@ -120,3 +120,8 @@ representative fixtures. Conventional Commits drive semantic-release on
 `master`; successful releases publish immutable Git tags and GitHub Releases
 with generated notes. GitHub Releases are the canonical release history, and
 published tags must never be moved.
+
+Repository-level release immutability is enabled, so GitHub locks the tag and
+assets of every release published from `v1.0.1` onward. Version `v1.0.0`
+predates that enforcement and is retained only as an immutable-by-policy
+transitional release.

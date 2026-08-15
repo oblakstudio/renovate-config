@@ -19,6 +19,11 @@ Remove `@semantic-release/changelog` and `@semantic-release/git` from the
 release configuration and development dependencies. Remove the now-stale
 `CHANGELOG.md`; GitHub Releases becomes the canonical release history.
 
+Enable GitHub's repository-level immutable releases setting before publishing
+the consumer release. The first successful workflow produced `v1.0.0` before
+this setting was enabled, so retain that tag unchanged and publish `v1.0.1`
+after enforcement is active. Consumers should pin `v1.0.1` or newer.
+
 ## Failure Behavior
 
 The release job continues to depend on the full validation job. GitHub's
@@ -31,5 +36,5 @@ security or moving an existing tag.
 The release policy test must require commit analysis, release-note generation,
 and GitHub publishing while rejecting plugins that mutate the repository or
 publish to npm. The full local `npm test` suite must pass. After pushing the
-signed fix commit, the `CI and Release` workflow must validate the repository
-and publish the first immutable release successfully.
+signed fix commit, the `CI and Release` workflow must validate the repository,
+publish `v1.0.1`, and GitHub must report that release as immutable.
