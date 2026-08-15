@@ -1,0 +1,7 @@
+{
+  "database": "dolt",
+  "backend": "dolt",
+  "dolt_mode": "embedded",
+  "dolt_database": "renovate_config",
+  "project_id": "b044e1eb-52ed-4dd5-a5c2-6dc056b4bdd3"
+}
