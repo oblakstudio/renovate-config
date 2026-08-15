@@ -167,7 +167,7 @@ The repository regains a small Node toolchain with pinned dependencies and a com
 6. Assert expected managers, rules, cooldowns, grouping, and automerge flags.
 7. Run formatting checks and `git diff --check`.
 
-After CI passes on `master`, semantic-release derives the version from Conventional Commits, updates release notes and the changelog, and creates an immutable Git tag and GitHub release. Published tags are never moved or rewritten. Renovate's `renovate-config` manager proposes new preset tags to consumers.
+After CI passes on `master`, semantic-release derives the version from Conventional Commits, generates release notes, tags the existing signed commit, and creates an immutable GitHub release. GitHub Releases are the canonical release history. Published tags are never moved or rewritten. Renovate's `renovate-config` manager proposes new preset tags to consumers.
 
 ## Compatibility and Migration
 

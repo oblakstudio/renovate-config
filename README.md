@@ -117,5 +117,6 @@ for an explicit runtime override. Removing compatibility aliases requires a
 Run `npm ci` followed by `npm test`. The suite checks formatting, every preset
 graph, strict Renovate validation, policy outcomes, and local extraction from
 representative fixtures. Conventional Commits drive semantic-release on
-`master`; successful releases update `CHANGELOG.md` and publish immutable Git
-tags and GitHub releases. Published tags must never be moved.
+`master`; successful releases publish immutable Git tags and GitHub Releases
+with generated notes. GitHub Releases are the canonical release history, and
+published tags must never be moved.

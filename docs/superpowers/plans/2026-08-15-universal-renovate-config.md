@@ -94,10 +94,9 @@
 
 - Create: `.github/workflows/ci.yml`
 - Create: `.releaserc.json`
-- Create: `CHANGELOG.md`
 
 - [x] Configure pull-request and `master` CI on Node 24 with `npm ci`, `npm test`, and `git diff --check`.
-- [x] Configure semantic-release for Conventional Commits, generated notes/changelog, GitHub releases, and committed release metadata without publishing to npm.
+- [x] Configure semantic-release for Conventional Commits, generated GitHub release notes, and immutable tags without publishing to npm or committing release metadata.
 - [x] Grant release jobs only `contents`, `issues`, and `pull-requests` write permissions and run releases only after tests pass on `master`.
 - [x] Validate workflow YAML through Renovate extraction and run the local test suite.
 - [x] Commit with `ci: add validated semantic releases`.
