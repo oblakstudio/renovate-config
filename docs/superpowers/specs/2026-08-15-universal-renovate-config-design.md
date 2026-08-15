@@ -67,18 +67,18 @@ The base extends `config:recommended` and adds explicit organization policy rath
 
 The base retains `config:recommended` exclusions for generated, test, fixture, and example directories. A maintained project inside one of those paths must opt back in through a documented repository override.
 
-| Concern | Policy |
-| --- | --- |
-| Time zone | `Europe/Belgrade` |
-| Ordinary update window | Monday-Thursday before 08:00 |
-| Automerge window | Same as ordinary updates |
-| PR limits | 10 concurrent, 5 new per hour |
-| Lockfile maintenance | Early Monday; automerge after checks |
-| Merge method | PR automerge with squash |
-| Status checks | `ignoreTests: false`; absent, pending, or failed checks block automerge |
-| Merge engine | Renovate-controlled with `platformAutomerge: false` |
-| Major updates | Dependency Dashboard approval, then manual review |
-| Reviewers | None assigned by Renovate; CODEOWNERS and repository rules apply |
+| Concern                | Policy                                                                  |
+| ---------------------- | ----------------------------------------------------------------------- |
+| Time zone              | `Europe/Belgrade`                                                       |
+| Ordinary update window | Monday-Thursday before 08:00                                            |
+| Automerge window       | Same as ordinary updates                                                |
+| PR limits              | 10 concurrent, 5 new per hour                                           |
+| Lockfile maintenance   | Early Monday; automerge after checks                                    |
+| Merge method           | PR automerge with squash                                                |
+| Status checks          | `ignoreTests: false`; absent, pending, or failed checks block automerge |
+| Merge engine           | Renovate-controlled with `platformAutomerge: false`                     |
+| Major updates          | Dependency Dashboard approval, then manual review                       |
+| Reviewers              | None assigned by Renovate; CODEOWNERS and repository rules apply        |
 
 Automerge candidates remain current with the base branch. Reviewed PRs rebase only when conflicted or manually requested.
 

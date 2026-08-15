@@ -1,0 +1,28 @@
+{
+  "name": "@oblakstudio/renovate-config",
+  "version": "0.0.0-development",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test:unit": "node --test test/*.test.mjs",
+    "validate": "node scripts/validate-presets.mjs",
+    "test:fixtures": "node scripts/test-fixtures.mjs",
+    "test": "npm run format:check && npm run test:unit && npm run validate && npm run test:fixtures"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "7.0.0",
+    "@semantic-release/commit-analyzer": "13.0.1",
+    "@semantic-release/git": "11.0.1",
+    "@semantic-release/github": "12.0.9",
+    "@semantic-release/release-notes-generator": "14.1.1",
+    "json5": "2.2.3",
+    "prettier": "3.9.6",
+    "renovate": "44.30.3",
+    "semantic-release": "25.0.9"
+  }
+}
