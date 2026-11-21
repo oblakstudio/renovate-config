@@ -21,6 +21,6 @@
     "json5": "2.2.3",
     "prettier": "3.9.6",
     "renovate": "44.30.3",
-    "semantic-release": "25.0.9"
+    "semantic-release": "26.0.1"
   }
 }
